@@ -1,0 +1,65 @@
+body {
+  background-image: url("../img/bio-img.jpg");
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bio-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.left {
+  width: 50%;
+  /* background-color: black; */
+  color: white;
+  padding-top: 60px;
+}
+
+.left p {
+  margin: 10px 20%;
+}
+
+.right {
+  width: 50%;
+  /* background-color: black; */
+}
+
+.right img {
+  margin-top: 100px;
+  margin-left: 25%;
+  width: 450px;
+  height: 450px;
+}
+
+/* js style */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bio-container p {
+  opacity: 0; /* Başlangıçta paragrafları görünmez yapın */
+  transition: opacity 0.8s ease-in-out;
+}
+
+.bio-container p.animate {
+  animation: fadeIn 1s ease-in-out;
+  opacity: 1; /* Paragrafın animasyon sonunda tamamen görünür olmasını sağlar */
+}

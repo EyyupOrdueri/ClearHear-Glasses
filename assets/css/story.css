@@ -1,0 +1,22 @@
+body {
+  background-image: url("../img/video-img.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.story-container {
+  color: white;
+  margin-top: 50px;
+  padding: 0 80px;
+  font-size: 20px;
+}
+
+.story-container h1 {
+  font-size: 100px;
+}
+
+.story-container p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 40px;
+}
