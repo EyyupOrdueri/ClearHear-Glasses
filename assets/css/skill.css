@@ -1,3 +1,14 @@
+:root {
+  --col1: 1fr;
+  --col2: 1fr;
+  --col3: 1fr;
+  --row1: 1fr;
+  --row2: 1fr;
+  --row3: 1fr;
+  --cl-main: #ffcccc;
+  --cl-text: black;
+}
+
 body {
   background-image: url("../img/skills-img.jpg");
   background-position: left;
@@ -5,15 +16,52 @@ body {
   background-repeat: no-repeat;
 }
 
-.skills-container {
-  margin-top: 70px;
-  text-align: center;
+.grid {
+  display: grid;
+  grid-template-columns: var(--col1) var(--col2) var(--col3);
+  grid-template-rows: var(--row1) var(--row2) var(--row3);
+  height: 100vh;
+  transition: all 0.2s;
+  background-color: var(--cl-main);
 }
 
-#features {
-  margin: 50px auto 0 auto;
+.grid:has(.item:nth-child(3n + 1):hover) {
+  --col1: 2fr;
+}
+
+.grid:has(.item:nth-child(3n + 2):hover) {
+  --col2: 2fr;
+}
+
+.grid:has(.item:nth-child(3n + 3):hover) {
+  --col3: 2fr;
+}
+.grid:has(.item:nth-child(n + 1):nth-child(-n + 3):where(:hover, :focus)) {
+  --row1: 2fr;
+}
+.grid:has(.item:nth-child(n + 4):nth-child(-n + 6):where(:hover, :focus)) {
+  --row2: 2fr;
+}
+
+.grid:has(.item:nth-child(n + 7):nth-child(-n + 9):hover) {
+  --row3: 3fr;
+}
+
+.item {
   text-align: center;
-  width: 50%;
-  color: white;
-  font-size: 1.5rem;
+  display: grid;
+  align-content: center;
+  transition: scale 0.2s;
+  overflow: hidden;
+  border: 2px solid var(--cl-text);
+  background-color: var(--cl-main);
+  font-size: 1rem;
+  color: var(--cl-text);
+  padding: 0 24px;
+}
+
+.item:where(:hover, :focus) {
+  scale: 1.1;
+  z-index: 2;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5);
 }
