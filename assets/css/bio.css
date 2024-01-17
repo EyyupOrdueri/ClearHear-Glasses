@@ -58,6 +58,7 @@ h3 {
 .bio-container p {
   opacity: 0; /* Başlangıçta paragrafları görünmez yapın */
   transition: opacity 0.8s ease-in-out;
+  font-size: 20px;
 }
 
 .bio-container p.animate {
