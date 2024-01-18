@@ -31,10 +31,11 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: black;
+  display: flex;
 }
 
 nav li {
-  float: right;
+  /* float: right; */
 }
 
 nav li a {
