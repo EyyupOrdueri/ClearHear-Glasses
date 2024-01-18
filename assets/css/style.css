@@ -70,6 +70,10 @@ nav .active {
   font-size: 30px;
 }
 
+#container b {
+  font-weight: 900;
+}
+
 #container p {
   font-size: 25px;
 }
