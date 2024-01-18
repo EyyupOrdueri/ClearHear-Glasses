@@ -8,7 +8,7 @@ body {
   background-image: url("../img/homepage-bg.jpg");
   height: 100%;
   /* Center and scale the image nicely */
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
   /* Center and fill the bg */
