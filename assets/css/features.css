@@ -25,25 +25,25 @@ body {
   background-color: var(--cl-main);
 }
 
-.grid:has(.item:nth-child(3n + 1):hover) {
+.grid:has(.item:nth-child(3n + 1):focus) {
   --col1: 2fr;
 }
 
-.grid:has(.item:nth-child(3n + 2):hover) {
+.grid:has(.item:nth-child(3n + 2):focus) {
   --col2: 2fr;
 }
 
-.grid:has(.item:nth-child(3n + 3):hover) {
+.grid:has(.item:nth-child(3n + 3):focus) {
   --col3: 2fr;
 }
-.grid:has(.item:nth-child(n + 1):nth-child(-n + 3):where(:hover, :focus)) {
+.grid:has(.item:nth-child(n + 1):nth-child(-n + 3):where(:focus)) {
   --row1: 2fr;
 }
-.grid:has(.item:nth-child(n + 4):nth-child(-n + 6):where(:hover, :focus)) {
+.grid:has(.item:nth-child(n + 4):nth-child(-n + 6):where(:focus)) {
   --row2: 2fr;
 }
 
-.grid:has(.item:nth-child(n + 7):nth-child(-n + 9):hover) {
+.grid:has(.item:nth-child(n + 7):nth-child(-n + 9):focus) {
   --row3: 3fr;
 }
 
